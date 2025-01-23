@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcolatore Cataste</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Calcolatore Volume Cataste</h1>
+    <form id="catastaForm">
+      <label for="lunghezza">Lunghezza della catasta (m):</label>
+      <input type="number" id="lunghezza" step="0.01" required>
+
+      <label for="intervallo">Intervallo tra le misure (m):</label>
+      <input type="number" id="intervallo" step="0.01" required>
+
+      <label for="coefficiente">Coefficiente:</label>
+      <input type="number" id="coefficiente" step="0.01" required>
+
+      <label for="altezzaSingola">Inserisci altezza (m):</label>
+      <input type="number" id="altezzaSingola" step="0.01">
+
+      <ul id="listaAltezze"></ul>
+
+      <button type="submit">Calcola</button>
+    </form>
+
+    <div id="results" class="hidden">
+      <h2>Risultati:</h2>
+      <p id="areaResult"></p>
+      <p id="volumeResult"></p>
+      <canvas id="catastaChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
